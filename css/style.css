@@ -1,0 +1,59 @@
+body {
+  background-color: #eeebdc;
+}
+header {
+  background-color: #dfdccd;
+}
+
+header .container {
+  height: 100%;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 3.4em;
+}
+
+body > footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #dfdccd;
+}
+.btn {
+  background-color: #d0cbaf;
+}
+.container {
+  padding: 0;
+}
+.jumbotron {
+  background-image: url('../img/hero.jpg');
+  height: 480px;
+  margin: 0;
+}
+.bg-gray {
+  background-color: #c1c1bf;
+}
+
+.navbar {
+  background-color: #dfdccd;
+  font-size: 2em;
+}
+
+.active {
+  background-color: #d0cbaf;
+}
+
+@media (min-width: 992px) {
+  header .container {
+    position: relative;
+  }
+  .navbar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="js/validation.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bob Summers Landscaping</title>
+  </head>
+  <body>
+    <header>
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-xl-6">
+            <img
+              src="img/logo.png"
+              alt="Bob Summers Landscaping logo"
+              class="float-left"
+            />
+            <h1>Bob Summers</h1>
+            <h2>Landscaping</h2>
+          </div>
+          <div class="col-xl-6">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="about-us.html">About Us</a>
+                      <a class="dropdown-item" href="past-projects.html"
+                        >Past Projects</a
+                      >
+                      <a class="dropdown-item" href="testimonials.html"
+                        >Testimonials</a
+                      >
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown2"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Services
+                    </a>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="navbarDropdown2"
+                    >
+                      <a class="dropdown-item" href="services.html">Services</a>
+                      <a class="dropdown-item" href="landscaping-tips.html"
+                        >Landscaping Tips</a
+                      >
+                    </div>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="contact.html"
+                      >Contact <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container bg-light">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h3 class="pl-5 pt-5 display-3">Contact Us</h3>
+          <div id="formError" class="alert alert-danger d-none">
+            Please fill in the required fields.
+          </div>
+          <form id="contact-form" action="#" onsubmit="validateForm()">
+            <div class="form-group pt-3">
+              <label for="firstname"
+                >First Name <small>(required)</small></label
+              >
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="firstname"
+                placeholder="John"
+                required
+              />
+              <div id="firstnameError" class="alert alert-danger d-none">
+                First Name is required
+              </div>
+              <label for="lastname">Last Name <small>(required)</small></label>
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="lastname"
+                placeholder="Doe"
+                required
+              />
+              <div id="lastnameError" class="alert alert-danger d-none">
+                Last Name is required
+              </div>
+              <label for="email">Email <small>(required)</small></label>
+              <input
+                type="email"
+                class="form-control mb-3"
+                id="email"
+                placeholder="bsummers@bslandscaping.com"
+                required
+              />
+              <div id="emailError" class="alert alert-danger d-none">
+                Email is required
+              </div>
+              <label for="message-type">Option</label>
+              <select id="message-type" class="form-control mb-3">
+                <option value="sales">Sales</option>
+                <option value="testimonials">Testimonials</option>
+                <option value="Quote">Quote</option>
+                <option value="general" selected>General</option>
+              </select>
+              <label for="message">Description <small>(required)</small></label>
+              <textarea
+                id="message"
+                class="form-control mb-3"
+                rows="10"
+                placeholder="Any information pertaining to the request."
+                required
+              ></textarea>
+              <div id="messageError" class="alert alert-danger d-none">
+                Description is required
+              </div>
+              <input type="submit" class="btn mx-auto" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="p-4">
+      <p class="text-center m-0">
+        <span id="year"></span> &copy; Bob Summers Landscaping
+      </p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('#year').text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
